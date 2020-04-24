@@ -3,8 +3,10 @@ Time: O(N)
 Space: O(N)
 """ 
 
+from collections import defaultdict
+
 def majority(array): 
-    elem_count = collections.defaultdict(int)
+    elem_count = defaultdict(int)
     N = len(array) 
 
     for elem in array: 
