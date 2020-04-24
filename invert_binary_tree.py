@@ -1,10 +1,13 @@
-def TreeNode: 
+class TreeNode: 
     def __init__(self, value): 
         self.val = value 
         self.left = None 
         self.right = None 
 
-
+""" 
+Time: O(N) as every node is visited once 
+Space: O(depth) ~ O(N) if skewed tree
+""" 
 def invert_binary_tree(tree): 
     if not tree: return 
 
