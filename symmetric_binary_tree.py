@@ -1,3 +1,8 @@
+"""
+Time: O(N)
+Space: O(N)
+"""
+
 class Solution: 
     def isSymmetric(self, root): 
         if not root: return True 
@@ -10,3 +15,4 @@ class Solution:
         if left.val != right.val: return False 
 
         return self.validateSym(left.left, right.right) and self.validateSym(left.right, right.left)
+
