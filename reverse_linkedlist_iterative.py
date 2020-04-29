@@ -38,9 +38,9 @@ Consider the input: 1 -> 2 -> 3 -> 4 -> 5
 The trick here is to basically keep three pointers for each iteration and then repoint the nodes inplace. 
 
 The pointers needed are:
-                1) currentPointer(C) (points to the current node)
-                2) prevPointer(P) (points to the previous node)
-                3) nextPointer(N) (points to the next node)
+        1) currentPointer(C) (points to the current node)
+        2) prevPointer(P) (points to the previous node)
+        3) nextPointer(N) (points to the next node)
 
 For each node we perform: 
         1) Store nextPointer as currentPointer.next 
@@ -52,7 +52,7 @@ Hence, we are rearranging pointers in place.
 
 Consider the case when the currentPointer is at the second node. 
 
-    1 -> 2 -> 3 -> 4 -> 5  ==> 2 -> 1 ; 3 -> 4 -> 5 ==> 3 -> 2 -> 1 ; 4 -> 5 ==> 4 -> 3 -> 2 -> 1 ; 5 
+    1 -> 2 -> 3 -> 4 -> 5  ==> 2 -> 1 ; 3 -> 4 -> 5 ==> 3 -> 2 -> 1 ; 4 -> 5 ==> 4 -> 3 -> 2 -> 1 ; 5 etc..
     P    C    N                P        C    N         P              C    N     P                  C  N is None 
  
 The algorithm runs in O(N) time and O(1) space 
