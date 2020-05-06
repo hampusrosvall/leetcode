@@ -1,7 +1,9 @@
+# O(N log N) time and O(log N) space (average and best)
+# O(N^2) time worst case 
 def quickSort(array): 
     quickSortRecursive(array, 0, len(array) - 1)
     return array 
-    
+
 def quickSortRecursive(array, startIdx, endIdx): 
     if startIdx >= endIdx: return 
 

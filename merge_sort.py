@@ -1,3 +1,5 @@
+# always runs in O(N log N) time but runs in O(N log N) memory as we allocate N extra memeory at each level in the 
+# recursive call tree.
 def mergeSort(array): 
     if len(array) == 1: return array 
 
